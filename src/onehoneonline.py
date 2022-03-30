@@ -6,7 +6,7 @@ from base64 import b64encode
 from datetime import datetime
 from json import dumps, loads
 
-class Client: 
+class onehoneclient: 
     def __init__(
         self,
         token: str = None,
