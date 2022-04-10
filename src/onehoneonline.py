@@ -1,4 +1,5 @@
 import socket
+from time import sleep
 from sys import stderr
 from hashlib import md5
 from loguru import logger
@@ -13,7 +14,7 @@ class onehoneclient:
         platform: str = "android",
         debug: bool = False,
         language: str = "ru",
-        tag: str = "client"
+        tag: str = "101client"
     ):
         self.platform = platform
         self.tag = tag.upper()
@@ -37,6 +38,7 @@ class onehoneclient:
         self.logger.info(f"Connected to the server!")
 
     def send_server(self, data: dir):
+        sleep(0.1)
         self.socket.send(
             (data.pop("command") +
              dumps(
