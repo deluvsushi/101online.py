@@ -3,8 +3,7 @@
 
 ## Example
 ```py3
-# Simple login that uses authorization token
-import onehoneonline
-onehoneclient = onehoneonline.onehoneclient(token="")
-print(f"-- Account user_id is::: {onehoneclient.user_id}")
+import one_h_one_online
+one_h_one_online = one_h_one_online.OneHOneOnline()
+one_h_one_online.login_with_access_token(access_token="")
 ```
